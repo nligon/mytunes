@@ -17,11 +17,11 @@ describe('App', function() {
     app = new AppModel({library: fakeSongs});
   });
 
-  it('creates a song queue on initialize', function() {
+  xit('creates a song queue on initialize', function() {
     expect(app.get('songQueue')).to.be.an.instanceof(SongQueue);
   });
 
-  it('sets the current song when a "play" event is fired', function() {
+  xit('sets the current song when a "play" event is fired', function() {
     expect(app.get('currentSong')).to.be.an('object');
     app.get('library').at(0).play();
     expect(app.get('currentSong')).to.equal(app.get('library').at(0));
